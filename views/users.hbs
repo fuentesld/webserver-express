@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+{{> head}}
+{{> navbar}}
+
+<body class="grey lighten-4">
+
+  <!-- Section Users -->
+  <section class="section section-categories grey lighten-4">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Categories</span>
+              <table class="striped">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Registered</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td width="70"><img src="img/person1.jpg" alt="" class="responsive-img circle" style="width: 40px; margin-left: 10px;"></td>
+                    <td>John Doe</td>
+                    <td>jhondoe@gmail.com</td>
+                    <td>January 1, 2018</td>
+                    <td>
+                      <a href="details.html" class="btn blue ligthen-2">Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="70"><img src="img/person2.jpg" alt="" class="responsive-img circle" style="width: 40px; margin-left: 10px;"></td>
+                    <td>Larry Waters</td>
+                    <td>lwaters@gmail.com</td>
+                    <td>January 3, 2018</td>
+                    <td>
+                      <a href="details.html" class="btn blue ligthen-2">Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="70"><img src="img/person3.jpg" alt="" class="responsive-img circle" style="width: 40px; margin-left: 10px;"></td>
+                    <td>Susan Williams</td>
+                    <td>lwilliams@gmail.com</td>
+                    <td>January 5, 2018</td>
+                    <td>
+                      <a href="details.html" class="btn blue ligthen-2">Details</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="70"><img src="img/person4.jpg" alt="" class="responsive-img circle" style="width: 40px; margin-left: 10px;"></td>
+                    <td>Clack Kent</td>
+                    <td>superman@gmail.com</td>
+                    <td>January 6, 2018</td>
+                    <td>
+                      <a href="details.html" class="btn blue ligthen-2">Details</a>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+            <div class="card-action">
+              <ul class="pagination">
+                <li class="disable">
+                  <a href="#!" class="blue-text"><i class="material-icons">chevron_left</i></a>
+                </li>
+                <li class="active blue lighten-2"><a href="" class="white-text">1</a></li>
+                <li class="waves-effect"><a href="#!" class="blue-text">2</a></li>
+                <li class="waves-effect"><a href="#!" class="blue-text">3</a></li>
+                <li class="waves-effect"><a href="#!" class="blue-text">4</a></li>
+                <li class="waves-effect"><a href="#!" class="blue-text">5</a></li>
+                <li class="waves-effect">
+                  <a href="#!" class="blue-text"><i class="material-icons">chevron_right</i></a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  {{> footer}}
+
+  <!-- Fixed action button -->
+  <div class="fixed-action-btn">
+    <a href="#user-modal" class="modal-trigger btn-floating btn-large red">
+      <i class="material-icons">add</i>
+    </a>
+  </div>
+
+
+  <!-- Add User Modal -->
+  <div class="modal" id="user-modal">
+    <div class="modal-content">
+      <h4>Add User</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="name"><label for="name">Name</label>
+        </div>
+        <div class="input-field">
+          <input type="email" id="email"><label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password"><label for="password">Password</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password2"><label for="password2">Retype Password</label>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Preloader -->
+  <div class="loader preloader-wrapper big active">
+    <div class="spinner-layer spinner-blue-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <script>
+    $('.section').hide();
+    setTimeout(function () {
+      $(document).ready(function () {
+        // Show Section
+        $('.section').fadeIn();
+
+        // Hide Preloader
+        $('.loader').fadeOut();
+
+        //Init Side nav
+        $(".button-collapse").sideNav();
+
+        // Init Modal
+        $('.modal').modal();
+
+      });
+    }, 1000)
+  </script>
+</body>
+
+</html>
